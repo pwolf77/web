@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<h2>Én vagyok a nyitó oldal</h2>
+
+<h3>Legújabb hírek</h3>
+
+<div style="display: flex; flex-wrap:wrap; flex-direction: row;">
+
+	{% for hir in hirek %}
+
+		<div style="width:33.3333%; border: 1px solid #000000; padding: 10px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;	box-sizing: border-box;">
+			<h4><a href="hirek/{{ hir.id }}" title="">{{ hir.cim }}</a></h4>
+			<p>{{ hir.bevezeto }}</p>
+		</div>
+
+	{% endfor %}
+
+</div>
+
+{% endblock %}

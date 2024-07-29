@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>  
+Options +FollowSymLinks -MultiViews
+RewriteEngine on  
+
+RewriteCond %{REQUEST_FILENAME} !-f   
+RewriteCond %{REQUEST_FILENAME} !-d   
+RewriteRule ^(.*) index.php?rewrite=$1 [QSA] // weboldal.hu/a/b/c/d -> weboldal.hu/index.php?rewrite=a/b/c/d QSA: ha pl. /?a=5&b=7 akkor letrejon az a es b valtozo
+</IfModule>  
+
